@@ -1,0 +1,101 @@
+---
+import { Image } from 'astro:assets';
+import avatar from '../assets/avatar-jessica.jpeg';
+---
+<section id="container">
+  <section id="logo-container">
+    <Image id="logo" src={avatar} alt="Logo"/>
+  </section>
+
+  <section id="personal">
+    <h1>Jessica Randall</h1>
+    <strong>London, United Kingdom</strong>
+  </section>
+
+
+  <p id="quote">"Front-end developer and avid reader."</p>
+
+  <section id="button-list">
+    <button type="button">
+      GitHub
+    </button>
+
+    <button type="button">
+      Frontend Mentor 
+    </button>
+
+    <button type="button">
+      LinkedIn 
+    </button>
+
+    <button type="button">
+      Twitter 
+    </button>
+
+    <button type="button">
+      Instagram 
+    </button>
+
+  </section>
+</section>
+
+<style>
+  #container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+    width: 20rem;
+    padding: 3rem;
+    border-radius: 1rem;
+    background-color: var(--color-grey-800);
+    color: white;
+  }
+
+  #logo-container {
+    #logo {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  #personal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h1,
+    strong {
+      margin: 0;
+    }
+  }
+
+  #quote {
+    font-weight: 200;
+  }
+
+  #button-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    button {
+      border-radius: 0.5rem;
+      box-shadow: none;
+      border: none;
+      background-color: var(--color-grey-700);
+      color: white;
+      padding: 1rem;
+      font-weight: 600;
+    }
+
+    button:hover {
+      color: black;
+      cursor: pointer;
+      background-color: var(--color-green);
+    }
+  }
+</style>
